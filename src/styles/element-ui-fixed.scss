@@ -1,0 +1,99 @@
+// 顶部tabBar-Popover样式重置
+.topBarPopover {
+  top: 60px !important;
+}
+// 左侧导航一级收起后划过样式修改
+.letBarPopover{
+  left: 55px !important;
+}
+
+// 全局设置table表头颜色
+.el-table thead th,
+.el-table thead tr {
+  background: #fafafa;
+}
+
+.el-table .cell {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.el-table__row .cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.el-table__row .no-cell {
+  white-space: normal !important;
+}
+// 高亮显示table某行
+.el-table .success-row {
+  background: #f0f9eb;
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+.el-table__fixed {
+  height: 100% !important;
+}
+.el-table__fixed-right {
+  height: 100% !important;
+}
+/* DATA */
+.el-date-editor .el-range-separator {
+  padding: 0;
+}
+
+/* el-tooltip */
+.el-tooltip__popper.is-dark {
+  position: absolute;
+  background: #ffffff;
+  max-width: 600px;
+  border: 1px solid #EBEEF5;
+  padding: 12px;
+  z-index: 2000;
+  color: #606266;
+  line-height: 1.4;
+  text-align: justify;
+  font-size: 12px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  word-break: break-all;
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow {
+  bottom: -6px;
+  border-top-color: #ffffff;
+  border-bottom-width: 0;
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+  bottom: 1px;
+  margin-left: -5px;
+  border-top-color: #ffffff;
+  border-bottom-width: 0;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}

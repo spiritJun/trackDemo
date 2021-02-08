@@ -1,0 +1,11 @@
+// 主题名称
+$theme-name: "primary";
+// 主题色配置
+$primary: #ffffff ;  //上左tabbar主色调-白色
+$primaryLight: lighten($primary, 20%) ;  //让主色 变得更亮10%
+$primaryDark: darken($primary, 10%) ; //让主色 变得更暗10%
+$activeSidebar:#2E53EB; //活动tabvar
+$sidebarFontColor:#fff;//lefttabbar字体颜色
+$sidebarFontColorPrimary:#222222;//lefttabbar字体默认颜色
+$topbarFontColor:#222222;//toptabbar字体颜色
+$topbarFontColorPrimary:#222222;//toptabbar字体默认颜色

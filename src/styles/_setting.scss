@@ -1,0 +1,104 @@
+@charset "UTF-8";
+// setting scss
+//-----------------------------------------------------
+// font相关
+//-----------------------------------------------------
+$baseFontFamily: "Helvetica Neue", Helvetica, "Microsoft YaHei", Tahoma, sans-serif !default;
+$fontCn: "SimSun"; //宋体
+$fontYaHei: "Microsoft Yahei"; //微软雅黑
+$fontHeiTi: "SimHei"; //黑体
+
+
+//fontSize
+$fontSizeBase: 14px !default;  // 正文常规字体大小
+$fontSizeMinimum: 12px !default; // 正文最小字体大小
+$fontSizeLarge: ceil(($fontSizeBase * 1.25)) !default; // ~18px
+$fontSizeMid: ceil(($fontSizeBase * 1.14285)) !default; // ~16px
+$fontSizeSmall: ceil(($fontSizeBase * 0.9)) !default; // ~13px
+
+// fontSize标题字体大小
+$fontSizeLargeTitle: 24px !default;
+$fontSizeMiddle: 22px !default;
+$fontSizeSmallTitle: 18px !default;
+$fontSizeSmallestTitle: 16px !default;
+$fontSizeLittlelestTitle:14px !default;
+
+// 连接颜色
+$link: #0079c3 !default;
+
+// 基本颜色
+//-----------------------------------------------------
+//主色调-蓝色
+$primary: #181c61 !default;   //修改系统整体的主题色即左侧菜单颜色
+//主色（网站第一主色调）       适用范围：网站所有蓝色的文字、色块、背景色等
+$primaryLight: lighten($primary, 20%) !default;
+//让主色 变得更亮10%
+$primaryDark: darken($primary, 10%) !default;
+//让主色 变得更暗10%
+
+$baseColor: #666;  // 正文字体颜色
+$auxiliaryColor: #999; // 辅助文字颜色
+$loseColor: #ccc; // 失效文字
+$linkColor: #409eff; // 连接文字
+$linkColorHover: lighten($linkColor, 10%); // 连接文字滑过
+$baseTitleColor: #000448; // 基础标题颜色
+
+
+$gray: #ccc !default; //常规文字      适用范围：普通信息、标题
+$grayLight: #ececec !default; //          适用范围：辅助性背景颜色等
+$grayLighter: #fcfcfc !default; //          亮灰
+$grayDark: #666 !default; //          暗灰
+$grayDarker: #323232 !default; //          深灰
+$white: #fff !default;
+$black: #000 !default;
+$error: #F56C6C; //错误警告
+$tableColor: rgba(0,0,0,0.65) !default;;
+
+/* 按钮配色 */
+$primaryColor: rgb(46,83,235);
+$primaryColorHover:rgba(46,83,235,0.8);
+$exportColor: #2cb7f5;
+$exportColorHover: #00A0E8;
+$warningColor: #e86616;
+$warningColorHover: #CE630F;
+$dangerColor: #E02016;
+$dangerColorHover: #BB1907;
+$resetColor: #F7B62D;  //修改主题色时处理这里将修改登录信息输入框的主题色
+$resntColorHover: lighten($resetColor, 10%);
+$btnTextColor: #F7B62D;  //修改主题色时处理这里将修改系统的左侧菜单高亮文字颜色、查询区域查询按钮颜色、表格操作按钮颜色、顶部快捷导航颜色
+
+/* border颜色*/
+$borderColor: #E9E9E9;
+
+/* 主体背景色 */
+$baseBodyColor:#F5F5FC;
+
+
+
+// link
+//-----------------------------------------------------
+//lighten()和darken()两个函数都是围绕颜色的亮度值做调整的，
+// 其中lighten()函数会让颜色变得更亮，与之相反的darken()函数会让颜色变得更暗。
+// 这个亮度值可以是0~1之间，不过常用的一般都在3%~20%之间。著作权归作者所有。
+$linkColor: $primary !default;
+a {
+  text-decoration: none;
+  color: $linkColor;
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+  &:hover {
+    color: lighten($linkColor, 10%);
+  }
+}
+
+// 文字按钮颜色重置，根据主题按钮颜色
+.table-wrap{
+  .el-button--text{
+    color: darken($btnTextColor,5%);
+  }
+  .el-button--text:active,.el-button--text:focus,.el-button--text:hover{
+    color:darken($btnTextColor, 12%) 
+  }
+}

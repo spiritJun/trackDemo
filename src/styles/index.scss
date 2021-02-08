@@ -1,0 +1,151 @@
+@import './setting';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app{
+  width: 100%;
+  height: 100%;
+}
+
+.error {
+  color: #F56C6C;
+  font-size: 12px;
+}
+
+.navi-title {
+  margin-bottom: 14px;
+  height: 40px;
+  font-size: 24px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #202224;
+  line-height: 40px;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  .el-input__inner {
+    background: #F9F9FB;
+    border: none;
+    border-radius: 0;
+  }
+  .el-button--primary:focus, .el-button--primary:hover {
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
+  }
+  .el-button--primary.is-plain:focus, .el-button--primary.is-plain:hover {
+    background: #2E53EB;
+    border-color: #2E53EB;
+    color: #fff;
+  }
+  .el-date-editor {
+    .el-input__prefix {
+      right: 10px;
+      left: auto;
+      .el-input__icon {
+        font-weight: bold;
+      }
+    }
+  }
+  .search-input {
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    overflow: hidden;
+    .el-input-interval::after {
+      display: inline-block;
+      content: " ";
+      height: 40px;
+      width: 1px;
+      background: rgba(151, 151, 151, 0.3);
+      position: absolute;
+      right: 0;
+    }
+    .change-address {
+      display: inline-block;
+      background: #f9f9fb;
+      line-height: 40px;
+      cursor: pointer;
+      padding-right: 10px;
+      .el-icon-sort {
+        color: #d5d5d5;
+        font-weight: bold;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .button-space {
+    .el-button {
+      width: 132px;
+      height: 40px;
+      &:last-child {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+// 新加查询样式
+.search-wrap {
+  margin-bottom: 6px;
+  overflow: hidden;
+  .el-input {
+    width: 240px;
+  }
+  .el-date-editor {
+    width: 200px;
+  }
+  .el-button--primary:focus, .el-button--primary:hover {
+    background: $primaryColorHover;
+    border-color:$primaryColorHover ;
+    color: #fff;
+  }
+  .el-button--primary.is-plain:focus, .el-button--primary.is-plain:hover {
+    background: $primaryColor !important;
+    border-color: $primaryColor !important;
+    color: #fff;
+  }
+  .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item, .el-form-item--medium.el-form-item,.el-form--inline .el-form-item{
+    margin-bottom: 3px;
+  }
+  .el-form--inline .el-form-item {
+    margin-right: 5px;
+  }
+  .el-form-item__label {
+    padding: 0;
+  }
+  .search-fr {
+    float: right;
+    .el-button {
+      width: 132px;
+      height: 40px;
+      &:last-child {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+.custom-empty {
+  text-align: center;
+  width: 100%;
+  color: #909399;
+  img{
+    display: block;
+    margin:  0 auto;
+  }
+  p{
+    width: 100%;
+  }
+}
+
+@import './theme/register.scss';  //注册主题
+@import './element-ui-fixed.scss'; 
+
+
+
+
